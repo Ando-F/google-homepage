@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 </html>
 <style>
-    div {
+    .image-center {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 400px;
     }
     img {
-        width: 300px;
+        width: 270px;
         height: auto;
     }
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        min-width: 100px;
+    }
+    .search-icon {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        width: 20px;
+    }
+    .clear-icon {
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        width: 20px;
+        cursor: pointer;
+        <!-- visibility: hidden; -->
+    }
+    .search {
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 25px;
+        height: 38px;
+        width: 100%;
+        padding: 5px 8px 0px 16px;
+        padding-left: 7%;
+        outline: 0;
+        background-color: transparent;
+    }
+    #search-center {
+        position: absolute;
+        width: 500px;
+        top: 320px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .search:hover, .search:focus {
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    background-color: white;
+    border-color: rgba(223,225,229,0);
+  }
 </style>
 <body>
-    <div>
+    <div class="image-center">
         <img class="center" src="images/00.png" alt="">
     </div>
+
+    <main id="search-center" class="wrapper">
+        <input class="search" type="text">
+        <img class="search-icon" src="images/outline_search_black_24dp.png" />
+        <img class="clear-icon" src="images/outline_close_black_24dp.png" />
+    </main>  
+
 </body>
 
         
