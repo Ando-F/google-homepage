@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<style>
+    /* Andjusting the form of search bar */
+    .search {
+        height: 38px;
+        width: 500px;
+
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 25px;
+        padding: 5px 8px 0px 16px;
+        padding-left: 9%;
+        background-color: transparent;
+        outline: 0; /*clears the border around search bar*/
+    }
+    /* Setting the main container to adjust to browser window size */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 320px; /*this centers vertically*/
+    }
+    .shrink-search {
+        flex-shrink: 3;
+    }
+    /* Animation for searchbox */
+    .search:hover, .search:focus {
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    background-color: white;
+    border-color: rgba(223,225,229,0);
+    }
+</style>
+
+<html>
+<body>
+
+    <main class="container">
+        <input class="search shrink-search" type="text">
+    </main>  
+
+</body>     
+</html>
