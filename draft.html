@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <style>
+    /* Styling the nav bar */
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        margin-left: 15px;
+    }
+    /* List Images */
+    .list-img {
+        width: 27px;
+        cursor: pointer;
+        padding: 4px;
+    }
+    /* unvisited link */
+    a:link {
+        color: #5f6368;
+        text-decoration: none;
+    }
+    /* mouse over link */
+        a:hover {
+        text-decoration: underline;
+    }
+    .list-style {
+        display: flex; 
+        justify-content: flex-end;
+        color: #5f6368;
+    }
+    .list-img:hover {
+        background-color: rgba(60,64,67,0.08);
+        outline: none;
+        border-radius: 50%;
+        padding: 4px;
+    }
+
     /* Centering and resizing the Foogle image */
     .center {
         position: absolute;
@@ -29,11 +68,11 @@
         position: relative;
         justify-content: center;
         align-items: center;
-        height: 500px; /*this centers vertically*/
+        height: 400px; /*this centers vertically*/
     }
-    .shrink-search {
+    /* .shrink-search {
         flex-shrink: 3;
-    }
+    } */
     /* Animation for searchbox */
     .search:hover, .search:focus {
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
@@ -43,22 +82,43 @@
     /* Andjusting size and position of icons inside the search bar */
     .search-icon {
         position: absolute;
-        top: 13px;
-        left: 12px;
         width: 20px;
+        margin-left: 10px;
+    }
+    .mic-icon {
+        position: absolute;
+        width: 20px;
+        cursor: pointer;
+    }
+    .container-icon {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>
 
 <html>
 <body> 
-    
+    <div class="list-style">
+        <ul>
+            <li><a href="default.asp">Mail</a></li>
+            <li><a href="news.asp">Images</a></li>
+            <li><img class="list-img" style="margin-left: 15px;" src="images/outline_apps_black_24dp.png"</li>
+            <li><img class="list-img" src="images/outline_account_circle_black_24dp.png"</li>
+          </ul>
+    </div>
+
     <div class="center">
         <img src="images/00.png" alt="Foogle logo">
     </div>
 
     <div class="container">
-        <input class="search shrink-search" type="text">
-        <img class="search-icon" src="images/outline_search_black_24dp.png" />
+        <div class="container-icon">
+            <input class="search shrink-search" type="text">
+            <img class="search-icon" src="images/outline_search_black_24dp.png" />
+            <img class="mic-icon" src="images/outline_mic_black_24dp.png" />
+        </div>
     </div> 
 
 </body>     
