@@ -70,9 +70,6 @@
         align-items: center;
         height: 400px; /*this centers vertically*/
     }
-    /* .shrink-search {
-        flex-shrink: 3;
-    } */
     /* Animation for searchbox */
     .search:hover, .search:focus {
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
@@ -96,13 +93,36 @@
         justify-content: space-between;
         align-items: center;
     }
+    .buttons {
+        margin: 11px 4px;
+        padding: 0 16px;
+        cursor: pointer;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        
+    }
+    .buttons-center {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 150px;
+    }
+    .buttons:hover {
+        box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;
+    }
 </style>
 
 <html>
 <body> 
     <div class="list-style">
         <ul>
-            <li><a href="default.asp">Mail</a></li>
+            <li><a href="default.asp">Gmail</a></li>
             <li><a href="news.asp">Images</a></li>
             <li><img class="list-img" style="margin-left: 15px;" src="images/outline_apps_black_24dp.png"</li>
             <li><img class="list-img" src="images/outline_account_circle_black_24dp.png"</li>
@@ -115,11 +135,16 @@
 
     <div class="container">
         <div class="container-icon">
-            <input class="search shrink-search" type="text">
+            <input class="search" type="text">
             <img class="search-icon" src="images/outline_search_black_24dp.png" />
             <img class="mic-icon" src="images/outline_mic_black_24dp.png" />
         </div>
     </div> 
+
+    <div class="buttons-center">
+        <button class="buttons">Google Search</button>
+        <button class="buttons">I'm Feeling Lucky</button>
+    </div>
 
 </body>     
 </html>
