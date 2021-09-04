@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <style>
-    /* Centering and resizing the Foogle image */
-    .image-center {
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    main {
+        width: 90vw;
+        margin: 0 auto;
+        padding: 30px 20px;
+        min-height: calc(100hv - 39px - 58px);
+
+    }
+    /* Styling the top nav bar */
+    .ul-up {
         display: flex;
-        justify-content: center;
         align-items: center;
-        height: 400px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        margin-left: 15px;
+    }
+    /* List Images */
+    .list-img {
+        width: 27px;
+        cursor: pointer;
+        padding: 4px;
+    }
+    /* unvisited link */
+    a:link {
+        color: #5f6368;
+        text-decoration: none;
+    }
+    /* mouse over link */
+        a:hover {
+        text-decoration: underline;
+    }
+    .list-style {
+        display: flex; 
+        justify-content: flex-end;
+        color: #5f6368;
+    }
+    .list-img:hover {
+        background-color: rgba(60,64,67,0.08);
+        outline: none;
+        border-radius: 50%;
+        padding: 4px;
+    }
+
+    /* Centering and resizing the Foogle image */
+    .center {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     img {
         width: 270px;
         height: auto;
     }
-
-    /* Andjusting size and position of icons inside the search bar */
-    .search-icon {
-        position: absolute;
-        top: 13px;
-        left: 12px;
-        width: 20px;
-    }
-    .mic-icon {
-        position: absolute;
-        top: 13px;
-        right: 12px;
-        width: 23px;
-        cursor: pointer;
-    }
-
     /* Andjusting the form of search bar */
     .search {
+        height: 38px;
+        width: 500px;
+
         border: 1px solid rgb(224, 224, 224);
         border-radius: 25px;
-        height: 38px;
         padding: 5px 8px 0px 16px;
-        padding-left: 9%;
+        padding-left: 7%;
         background-color: transparent;
-        width: 580px;
         outline: 0; /*clears the border around search bar*/
     }
-    /* Centering the searchbar and icons*/
-    .elements-center {
-        position: absolute;
-        top: 320px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    /* Setting the main container to adjust to browser window size */
+    .container {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 400px; /*this centers vertically*/
     }
     /* Animation for searchbox */
     .search:hover, .search:focus {
@@ -51,19 +87,118 @@
     background-color: white;
     border-color: rgba(223,225,229,0);
     }
+    /* Andjusting size and position of icons inside the search bar */
+    .search-icon {
+        position: absolute;
+        width: 20px;
+        margin-left: 10px;
+    }
+    .mic-icon {
+        position: absolute;
+        width: 20px;
+        margin-left: 480px;
+        cursor: pointer;
+    }
+    .container-icon {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* Creating under search buttons */
+    .buttons {
+        margin: 11px 4px;
+        padding: 0 16px;
+        cursor: pointer;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        
+    }
+    .buttons-center {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 150px;
+    }
+    .buttons:hover {
+        box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;
+    }
+    /* Styling the bottom nav bar */
+    .list-style-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position:relative;
+        min-height: 100%;
+        
+        background: #f2f2f2;
+        padding: 20px;
+        
+    }
+    .one-more {
+        justify-content: space-evenly;
+        
+    }
+    .ul-down {
+        list-style-type: none;
+    }
 </style>
 
 <html>
-<body>
-    <div class="image-center">
-        <img src="images/00.png" alt="Foogle logo">
+<body> 
+    <header>
+        <div class="list-style">
+            <ul class="ul-up">
+                <li><a href="default.asp">Gmail</a></li>
+                <li><a href="news.asp">Images</a></li>
+                <li><img class="list-img" style="margin-left: 15px;" src="images/outline_apps_black_24dp.png"</li>
+                <li><img class="list-img" src="images/outline_account_circle_black_24dp.png"</li>
+              </ul>
+        </div>
+    
+        <div class="center">
+            <img src="images/00.png" alt="Foogle logo">
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="container-icon">
+                <input class="search" type="text">
+                <img class="search-icon" src="images/outline_search_black_24dp.png" />
+                <img class="mic-icon" src="images/outline_mic_black_24dp.png" />
+            </div>
+        </div> 
+    
+        <div class="buttons-center">
+            <button class="buttons">Google Search</button>
+            <button class="buttons">I'm Feeling Lucky</button>
+        </div>
+    </main>
+
+    <div class="list-style-bottom one-more">
+        <div>
+            <ul class="ul-down">
+                <li><a href="default.asp">About</a></li>
+                <li><a href="news.asp">Advertising</a></li>
+                <li><a href="news.asp">Business</a></li>
+                <li><a href="news.asp">How Search works</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="ul-down">
+                <li><a href="news.asp">Privacy</a></li>
+                <li><a href="news.asp">Terms</a></li>
+                <li><a href="news.asp">Settings</a></li>
+            </ul>
+        </div>
     </div>
-
-    <main class="elements-center">
-        <input class="search shrink-search" type="text">
-        <img class="search-icon" src="images/outline_search_black_24dp.png" />
-        <img class="mic-icon" src="images/outline_mic_black_24dp.png" />
-    </main>  
-
 </body>     
 </html>
