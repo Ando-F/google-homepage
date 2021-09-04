@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <style>
-    /* Styling the nav bar */
-    ul {
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    main {
+        width: 90vw;
+        margin: 0 auto;
+        padding: 30px 20px;
+        min-height: calc(100hv - 39px - 58px);
+
+    }
+    /* Styling the top nav bar */
+    .ul-up {
         display: flex;
         align-items: center;
         list-style-type: none;
@@ -85,6 +96,7 @@
     .mic-icon {
         position: absolute;
         width: 20px;
+        margin-left: 480px;
         cursor: pointer;
     }
     .container-icon {
@@ -93,6 +105,7 @@
         justify-content: space-between;
         align-items: center;
     }
+    /* Creating under search buttons */
     .buttons {
         margin: 11px 4px;
         padding: 0 16px;
@@ -116,35 +129,76 @@
         border: 1px solid #dadce0;
         color: #202124;
     }
+    /* Styling the bottom nav bar */
+    .list-style-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position:relative;
+        min-height: 100%;
+        
+        background: #f2f2f2;
+        padding: 20px;
+        
+    }
+    .one-more {
+        justify-content: space-evenly;
+        
+    }
+    .ul-down {
+        list-style-type: none;
+    }
 </style>
 
 <html>
 <body> 
-    <div class="list-style">
-        <ul>
-            <li><a href="default.asp">Gmail</a></li>
-            <li><a href="news.asp">Images</a></li>
-            <li><img class="list-img" style="margin-left: 15px;" src="images/outline_apps_black_24dp.png"</li>
-            <li><img class="list-img" src="images/outline_account_circle_black_24dp.png"</li>
-          </ul>
-    </div>
-
-    <div class="center">
-        <img src="images/00.png" alt="Foogle logo">
-    </div>
-
-    <div class="container">
-        <div class="container-icon">
-            <input class="search" type="text">
-            <img class="search-icon" src="images/outline_search_black_24dp.png" />
-            <img class="mic-icon" src="images/outline_mic_black_24dp.png" />
+    <header>
+        <div class="list-style">
+            <ul class="ul-up">
+                <li><a href="default.asp">Gmail</a></li>
+                <li><a href="news.asp">Images</a></li>
+                <li><img class="list-img" style="margin-left: 15px;" src="images/outline_apps_black_24dp.png"</li>
+                <li><img class="list-img" src="images/outline_account_circle_black_24dp.png"</li>
+              </ul>
         </div>
-    </div> 
+    
+        <div class="center">
+            <img src="images/00.png" alt="Foogle logo">
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="container-icon">
+                <input class="search" type="text">
+                <img class="search-icon" src="images/outline_search_black_24dp.png" />
+                <img class="mic-icon" src="images/outline_mic_black_24dp.png" />
+            </div>
+        </div> 
+    
+        <div class="buttons-center">
+            <button class="buttons">Google Search</button>
+            <button class="buttons">I'm Feeling Lucky</button>
+        </div>
+    </main>
 
-    <div class="buttons-center">
-        <button class="buttons">Google Search</button>
-        <button class="buttons">I'm Feeling Lucky</button>
+    <div class="list-style-bottom one-more">
+        <div>
+            <ul class="ul-down">
+                <li><a href="default.asp">About</a></li>
+                <li><a href="news.asp">Advertising</a></li>
+                <li><a href="news.asp">Business</a></li>
+                <li><a href="news.asp">How Search works</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="ul-down">
+                <li><a href="news.asp">Privacy</a></li>
+                <li><a href="news.asp">Terms</a></li>
+                <li><a href="news.asp">Settings</a></li>
+            </ul>
+        </div>
     </div>
-
 </body>     
 </html>
